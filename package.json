@@ -1,0 +1,9 @@
+{
+  "name": "portfolio-html",
+  "version": "1.0.0",
+  "main": "index.html",
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
