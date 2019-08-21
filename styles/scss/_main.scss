@@ -1,0 +1,31 @@
+/* --------------------------------- */
+/* Global Styles  */
+body {
+  background-color: $main-bg-color;
+  color: $main-txt-color;
+  line-height: 1.75rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+p {
+  text-align: left;
+}
+
+/* Images */
+.img-responsive {
+  width: 100%;
+  height: auto;
+}

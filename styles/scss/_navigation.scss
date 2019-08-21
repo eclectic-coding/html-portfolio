@@ -1,0 +1,81 @@
+/* nav styles */
+.container nav {
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+
+  & a:hover {
+    text-decoration: none;
+  }
+}
+
+/* media query for grid layout */
+@media only screen and (min-width: 600px) {
+  /* grid */
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* specific item styles */
+  .container header,
+  .container nav,
+  .container footer {
+    grid-column: span 4;
+  }
+  .container section {
+    grid-column: span 3;
+  }
+
+  /* nav styles */
+  nav ul li {
+    display: inline-block;
+    padding: 0 20px 0 0;
+  }
+
+  /* hide toggle */
+  .toggle {
+    display: none;
+  }
+}
+
+/* media query for nav styles */
+@media only screen and (max-width: 599px) {
+  #nav {
+    transition: transform 0.3s ease-in-out;
+    top: 0;
+    bottom: 0;
+    min-height: 100vh; /* override Safari bug */
+    position: fixed; /* or choose `absolute` depending on desired behavior*/
+    width: 300px;
+    left: -320px;
+  }
+
+  #nav:target {
+    transform: translateX(320px);
+    background: var(--info);
+    opacity: 0.9;
+  }
+
+  .open {
+    color: white;
+  }
+
+  .close {
+    text-align: right;
+    display: block;
+    text-decoration: none;
+    font-size: 2em;
+    position: relative;
+    top: -30px;
+    color: white;
+  }
+}
