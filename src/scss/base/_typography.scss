@@ -1,0 +1,30 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+p {
+  text-align: left;
+}
+
+/* Images */
+.img-responsive {
+  width: 100%;
+  height: auto;
+}

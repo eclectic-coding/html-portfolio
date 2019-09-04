@@ -1,13 +1,41 @@
 {
   "name": "portfolio-html",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "index.js",
+  "description": "",
+  "author": "eclecticcoding <chuck@eclecticsaddlebag.com>",
   "license": "MIT",
-  "dependencies": {
-    "node-sass": "^4.12.0",
-    "normalize.css": "^8.0.1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eclectic-coding/html-portfilio-project"
   },
-  "scripts": {
-    "sass": "node-sass ./styles/scss/styles.scss ./styles.css"
-  }
+  "devDependencies": {
+    "browser-sync": "2.26.7",
+    "browserslist": "^4.6.6",
+    "del": "^5.1.0",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "7.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-cssnano": "2.1.3",
+    "gulp-flatmap": "1.0.2",
+    "gulp-header": "2.0.9",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-jshint": "2.1.0",
+    "gulp-optimize-js": "1.1.0",
+    "gulp-rename": "1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "1.2.0",
+    "jshint": "2.10.2",
+    "jshint-stylish": "2.2.1",
+    "lazypipe": "1.0.2",
+    "sass-rem": "^2.0.1"
+  },
+  "browserslist": [
+    "> 0.25%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {}
 }

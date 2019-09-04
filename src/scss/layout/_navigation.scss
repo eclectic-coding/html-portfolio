@@ -1,4 +1,4 @@
-/* nav styles */
+/* nav scss */
 .container nav {
   color: yellow;
 }
@@ -25,7 +25,7 @@ nav a {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  /* specific item styles */
+  /* specific item scss */
   .container header,
   .container nav,
   .container footer {
@@ -35,7 +35,7 @@ nav a {
     grid-column: span 3;
   }
 
-  /* nav styles */
+  /* nav scss */
   nav ul li {
     display: inline-block;
     padding: 0 20px 0 0;
@@ -47,7 +47,7 @@ nav a {
   }
 }
 
-/* media query for nav styles */
+/* media query for nav scss */
 @media only screen and (max-width: 599px) {
   #nav {
     transition: transform 0.3s ease-in-out;
