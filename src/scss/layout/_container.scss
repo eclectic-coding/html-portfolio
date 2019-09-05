@@ -3,13 +3,15 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
+  color: #353535;
+  font-size: 1.2em;
+  line-height: 1.5;
+  padding: 20px;
+  background: $main-bg-color;
 
-  /* items */
-  & > * {
-    color: #353535;
-    font-size: 1.2em;
-    line-height: 1.5;
-    padding: 20px;
-    background: #d0cfc5;
-  }
+}
+
+aside {
+  padding: 20px;
+  background: $primary;
 }

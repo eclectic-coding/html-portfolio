@@ -1,0 +1,215 @@
+/*!
+ * portfolio-html v1.0.0
+ * 
+ * (c) 2019 
+ * MIT License
+ * https://github.com/eclectic-coding/html-portfilio-project
+ */
+
+/**
+ * Set up a decent box model on the root element
+ */
+/* line 8, src/scss/base/_base.scss */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+/* line 18, src/scss/base/_base.scss */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/**
+ * Basic scss for links
+ */
+/* line 27, src/scss/base/_base.scss */
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+/* line 18, src/scss/abstracts/_mixins.scss */
+a:hover, a:active, a:focus {
+  color: #333;
+  text-decoration: underline;
+}
+
+/**
+ * Basic typography style for copy text
+ */
+/* line 4, src/scss/base/_typography.scss */
+body {
+  color: #333;
+  font: normal 125%/1.4 Roberto;
+}
+
+/* Typography */
+/* line 11, src/scss/base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+/* line 22, src/scss/base/_typography.scss */
+p {
+  text-align: left;
+}
+
+/* Images */
+/* line 27, src/scss/base/_typography.scss */
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* grid */
+/* line 2, src/scss/layout/_container.scss */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  color: #353535;
+  font-size: 1.2em;
+  line-height: 1.5;
+  padding: 20px;
+  background: #fdf8f8;
+}
+
+/* line 14, src/scss/layout/_container.scss */
+aside {
+  padding: 20px;
+  background: #2980b9;
+}
+
+/* nav scss */
+/* line 2, src/scss/layout/_navigation.scss */
+.container nav {
+  color: #fff;
+}
+
+/* line 6, src/scss/layout/_navigation.scss */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 12, src/scss/layout/_navigation.scss */
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 16, src/scss/layout/_navigation.scss */
+nav a a:hover {
+  text-decoration: none;
+}
+
+/* media query for grid layout */
+@media only screen and (min-width: 600px) {
+  /* grid */
+  /* line 24, src/scss/layout/_navigation.scss */
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* specific item scss */
+  /* line 29, src/scss/layout/_navigation.scss */
+  .container header,
+  .container nav,
+  .container footer {
+    grid-column: span 4;
+  }
+  /* line 34, src/scss/layout/_navigation.scss */
+  .container section {
+    grid-column: span 3;
+  }
+  /* nav scss */
+  /* line 39, src/scss/layout/_navigation.scss */
+  nav ul li {
+    display: inline-block;
+    padding: 0 20px 0 0;
+  }
+  /* hide toggle */
+  /* line 45, src/scss/layout/_navigation.scss */
+  .toggle {
+    display: none;
+  }
+}
+
+/* media query for nav scss */
+@media only screen and (max-width: 599px) {
+  /* line 52, src/scss/layout/_navigation.scss */
+  #nav {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    /* override Safari bug */
+    position: fixed;
+    /* or choose `absolute` depending on desired behavior*/
+    width: 300px;
+    left: -320px;
+  }
+  /* line 62, src/scss/layout/_navigation.scss */
+  #nav:target {
+    -webkit-transform: translateX(320px);
+            transform: translateX(320px);
+    background: var(--info);
+    opacity: 0.9;
+  }
+  /* line 68, src/scss/layout/_navigation.scss */
+  .open {
+    color: white;
+  }
+  /* line 72, src/scss/layout/_navigation.scss */
+  .close {
+    text-align: right;
+    display: block;
+    text-decoration: none;
+    font-size: 2em;
+    position: relative;
+    top: -30px;
+    color: white;
+  }
+}
+
+/* UI Elements */
+/* line 2, src/scss/components/_buttons.scss */
+button {
+  background-color: var(--primary);
+  color: yellow;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+/* line 13, src/scss/components/_buttons.scss */
+button:hover {
+  background-color: white;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
