@@ -30,7 +30,7 @@
     "jshint": "2.13.0",
     "jshint-stylish": "2.2.1",
     "lazypipe": "1.0.2",
-    "sass-rem": "2.0.1"
+    "sass-rem": "3.0.0"
   },
   "browserslist": [
     "> 0.25%",
