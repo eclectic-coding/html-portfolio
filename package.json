@@ -10,7 +10,7 @@
     "url": "https://github.com/eclectic-coding/html-portfilio-project"
   },
   "devDependencies": {
-    "browser-sync": "2.27.4",
+    "browser-sync": "2.27.5",
     "browserslist": "4.16.6",
     "del": "6.0.0",
     "gulp": "4.0.2",
